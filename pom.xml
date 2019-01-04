@@ -10,6 +10,25 @@
   <dependencies>
   
   <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>htmlunit-driver</artifactId>
+                <version>2.20</version>
+            </dependency>
+           
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>2.53.0</version>
+            </dependency>
+            
+             <dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<scope>compile</scope>
+		</dependency>
+  
+  <dependency>
     <groupId>javax.servlet</groupId>
     <artifactId>javax.servlet-api</artifactId>
     <version>3.0.1</version>
@@ -29,8 +48,51 @@
     <scope>test</scope>
 </dependency>
 
+ <dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<scope>compile</scope>
+		</dependency>
+
   </dependencies>
+  
+   
+   <distributionManagement>
+  <repository>
+    <id>repo1</id>
+    <url>http://35.244.31.179:8081/nexus/content/repositories/repo1</url>
+  </repository>
+</distributionManagement>
   <build>
+  
+  <plugins>
+  <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.9</source>
+					<target>1.9</target>
+				</configuration>
+			</plugin>
+  
+  
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>testng.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+        </configuration>
+      </plugin>
+       
+ </plugins>
+  
     <finalName>sample123</finalName>
   </build>
 </project>
