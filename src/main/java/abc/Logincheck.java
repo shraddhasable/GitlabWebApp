@@ -10,9 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 public class Logincheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    /**
-     * Default constructor. 
-     */
     public Logincheck() {
         // TODO Auto-generated constructor stub
     }
