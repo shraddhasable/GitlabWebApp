@@ -1,16 +1,16 @@
+package abc;
+
 import java.sql.*;  
 class MysqlCon{  
 public static void main(String args[]){  
 try{  
-Class.forName("com.mysql.jdbc.Driver");  
-Connection con=DriverManager.getConnection(  
-"jdbc:mysql://localhost:3306/denmark","root","root");  
-//here sonoo is database name, root is username and password  
+Connection con=DriverManager.getConnection("jdbc:postgresql://35.153.53.235:5432/denmark","roger","roger");  
+//here denmark is database name, roger is username and password  
 Statement stmt=con.createStatement();  
-ResultSet rs=stmt.executeQuery("select * from TEST");  
+ResultSet rs=stmt.executeQuery("select * from users");  
 while(rs.next())  
-System.out.println(rs.getString(1));  
+System.out.println(rs.getString(1)+" "+rs.getString(2));  
 con.close();  
-}catch(Exception e){ System.out.println(e);}  
+}catch(Exception e){ e.printStackTrace();}  
 }  
 }  
