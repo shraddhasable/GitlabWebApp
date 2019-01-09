@@ -13,7 +13,7 @@ public class DBUtil {
 					"roger");
 			// here denmark is database name, roger is username and password
 			Statement stmt = con.createStatement();
-			ResultSet rs = stmt.executeQuery("select * from test");
+			ResultSet rs = stmt.executeQuery("select * from users");
 			while (rs.next()) {
 				System.out.println(rs.getString(1));
 				String result=rs.getString(1);
