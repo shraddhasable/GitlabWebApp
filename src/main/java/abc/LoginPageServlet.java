@@ -14,6 +14,7 @@ public class LoginPageServlet extends HttpServlet{
 		  System.out.println("hello java");
 		  System.out.println(DBUtil.getDataFromDatabase());
          request.setAttribute("result", DBUtil.getDataFromDatabase());
+         
 		 response.sendRedirect("login.jsp");
 	}
 
