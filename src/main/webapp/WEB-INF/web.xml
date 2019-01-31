@@ -18,9 +18,20 @@
   	<servlet-name>LoginPageServlet</servlet-name>
   	<servlet-class>abc.LoginPageServlet</servlet-class>
   </servlet>
+   <servlet>
+   	<description>
+   	</description>
+   	<display-name>HelloWorld</display-name>
+   	<servlet-name>HelloWorld</servlet-name>
+   	<servlet-class>abc.HelloWorld</servlet-class>
+   </servlet>
   <servlet-mapping>
   	<servlet-name>LoginPageServlet</servlet-name>
   	<url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HelloWorld</servlet-name>
+  	<url-pattern>/HelloWorld</url-pattern>
   </servlet-mapping>
   
 </web-app>
